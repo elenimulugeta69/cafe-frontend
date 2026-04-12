@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heran Cafe</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body class="body">
+    <div class="back">
+
+    <header class="hero-section">
+        <nav class="navbar">
+            <div class="logo">Heran<span>Cafe</span></div>
+            <ul class="nav-links">
+                <li class="home"><a href="#">HOME</a></li>
+              <li class="about"><a href="#about-us" class="smooth-scroll">ABOUT US</a></li>
+                <li class="menu"><a href="menu.html">MENU</a></li>
+                <li class="order"><a href="#" class="order-btn">ORDER</a></li>
+            </ul>
+        </nav>
+
+        <div class="hero-content">
+            <h1>Heran Cafe</h1>
+            <p>a place where sweet flavors,<br>
+               fresh coffee, and<br>
+               warm moments come together</p>
+        </div>
+    </header>
+</div>
+<section class="about-us" id="about-us">
+   <section class="story-section">
+        <div class="container">
+            <div class="text-content">
+                <h1 class="main-title">About Heran Cafe</h1>
+                
+                <p class="description">
+                    Welcome to Heran Cafe, where every cup tells a 
+                    story and every dessert is made with love. We're 
+                    more than just a cafe - we're a cozy corner for 
+                    friends, dreamers, and coffee lovers. Come sit, 
+                    sip, and stay awhile.
+                </p>
+
+                <button class="btn-explore">explore <br>more</button>
+            </div>
+
+            <div class="image-wrapper">
+               <img src="h.jpg" alt="Cafe Image">
+            </div>
+        </div>
+    </section>
+</section>
+<script>
+document.querySelectorAll('.smooth-scroll').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        target.scrollIntoView({ behavior: 'smooth' });
+    });
+});
+</script>
+<section class="rating-section">
+    <div class="rating-container">
+        <h2>How was your moment at Heran Cafe?</h2>
+        <p>Your feedback helps our dreamers grow.</p>
+        
+        <div class="stars">
+            <span class="star" data-value="5">&#9733;</span>
+            <span class="star" data-value="4">&#9733;</span>
+            <span class="star" data-value="3">&#9733;</span>
+            <span class="star" data-value="2">&#9733;</span>
+            <span class="star" data-value="1">&#9733;</span>
+        </div>
+        
+        <textarea placeholder="Tell us more about your visit..."></textarea>
+        <br>
+        <button class="btn-submit">submit review</button>
+    </div>
+</section>
+
+<footer class="footer">
+    <div class="footer-content">
+        <div class="footer-brand">
+            <h3>Heran Cafe</h3>
+            <p>A cozy corner for friends.</p>
+        </div>
+       
+        <div class="footer-social">
+            <p>© 2026 Heran Cafe. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+</body>
+</html>

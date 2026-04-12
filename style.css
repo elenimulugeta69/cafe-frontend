@@ -1,0 +1,441 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+.hero-section {
+    height: 100vh;
+    width: 100%;
+    /* Dark linear-gradient creates the "overlay" look from the image */
+    background: linear-gradient(rgba(47, 6, 6, 0.5), rgba(48, 4, 4, 0.5)), 
+                url('2.jpg'); 
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 20px 50px;
+}
+
+.home:hover {
+    text-decoration: underline;/* Lighter shade of white for hover effect */
+}
+.about:hover {
+    text-decoration: underline;
+    /* Lighter shade of white for hover effect */
+}
+.menu:hover {
+    text-decoration: underline;/* Lighter shade of white for hover effect */
+}
+.order:hover {
+  /* gold/coffee color */
+  color: rgb(251, 242, 242); /* text color change */
+  transform: scale(1.1) ; 
+  border-color: #fffcfb;/* small pop effect */
+}
+
+/* Navbar Styling */
+.navbar {
+   background-color: rgba(63, 14, 14, 0.9)  ;
+  color: white;
+  padding: 20px 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+   position: fixed;
+  top:0;
+  left: 0;
+  width:100%;
+
+  
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.logo span {
+    font-weight: normal;
+    font-style: italic; /* Mimics the two-tone logo */
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+.nav-links li {
+    margin-left: 30px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+
+/* The ORDER button pill shape */
+.order-btn {
+    background-color: #432118; /* Dark chocolate brown */
+    padding: 8px 20px;
+    border-radius: 20px;
+}
+
+/* Central Text Styling */
+.hero-content {
+    margin-top: 150px;
+   
+   
+}
+
+
+.hero-content h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 80px;
+    font-style: italic;
+    margin-bottom: 10px;
+}
+
+.hero-content p {
+    font-family: 'Playfair Display', serif;
+    font-size: 32px;
+    font-style: italic;
+    line-height: 1.4;
+    font-weight: bold;
+}
+.menu-section {
+    background-color: rgb(100, 60, 60);
+   /* Deep burgundy/red background */
+    padding: 60px ;
+    
+    width: fit-content;
+    color: rgb(228, 180, 180);
+    box-sizing: border-box;
+    height: fit-content;
+}
+
+.menu-title {
+    font-family: 'serif';
+    font-size: 32px;
+    margin-bottom: 50px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-right: 0px;
+    margin-top: 0px;
+    color: #fcf9f9;
+}
+
+/* Grid layout for 3 columns */
+.menu-grid {
+    display: flex;
+     
+padding-top: 20px;
+     
+    gap: 30px;
+}
+
+/* Individual White Cards */
+.menu-item {
+    background-color: rgb(86, 27, 27);
+    border-radius: 40px; /* Large rounded corners from image */
+    overflow: hidden;
+    text-align: center;
+    padding-bottom: 20px;
+    box-shadow: #432118;
+    
+    flex: 0 0 270px; /* fixed width 250px */
+
+      opacity: 0;
+    transform: translateX(-60px);
+     animation: slideRight 0.7s ease forwards;
+    transition: transform 0.3s ease, box-shadow 0.8s ease;
+}
+.menu-item:nth-child(1){animation-delay:0.2s;}
+.menu-item:nth-child(2){animation-delay:0.4s;}
+.menu-item:nth-child(3){animation-delay:0.6s;}
+.menu-item:nth-child(4){animation-delay:0.8s;}
+.menu-item:nth-child(5){animation-delay:1s;}
+.menu-item:nth-child(6){animation-delay:1.2s;}
+@keyframes slideRight{
+    to{
+        opacity:1;
+        transform:translateX(0);
+    }
+}
+.menu-item img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    display: block;
+}
+
+/* Text inside the white cards */
+.item-info {
+    padding: 15px 10px;
+    color: #ffffff; /* Matching the red for the text */
+}
+
+.item-info h3 {
+    font-family: 'serif';
+    font-style: italic;
+    font-size: 24px;
+    margin-bottom: 5px;
+}
+
+.item-info p {
+    font-family: 'serif';
+    font-style: italic;
+    font-size: 22px;
+}
+
+/* Responsive: 1 column on small screens */
+@media (max-width: 900px) {
+    .menu-grid {
+        grid-template-columns: 1fr;
+    }
+}
+.button{
+    background-color: #6e2525;
+    border-radius: 20px;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+    box-sizing: linear-gradient(rgba(123, 17, 34, 0.8), rgba(123, 17, 34, 0.8));
+    color: white;
+    font-weight: bolder;
+    font-size: 16px;
+   margin: 10px;
+   padding: 10px 5px;
+    transition: 0.3s;
+}
+.button:hover{
+    background-color: #f4eeee;
+    color: #611414;
+    transform: scale(1.1);
+}
+.menu-item:hover{
+    transform: translateY(-20px);
+    box-shadow: 0 25px 45px rgba(0,0,0,0.3);
+}
+.menu-title{
+    text-align:left;
+}
+.menu-item:hover img {
+    transform: scale(1.05);
+}
+.about-us{
+    background-color: #572323;;
+}
+.body{
+    color: #fafafa;
+    background-color: #dcb4b4;
+}
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1100px;
+    margin: auto;
+    gap: 60px;
+}
+
+/* Text Side Styling */
+.text-content {
+    flex: 1;
+}
+
+.main-title {
+    font-family: 'Fredoka One', cursive; /* Matches the thick, rounded look */
+    font-size: 65px;
+    color: #ffffff; /* The exact dark brown from the image */
+    margin-bottom: 40px;
+    line-height: 1;
+   
+}
+
+.description {
+    font-family: 'Lora', serif;
+    font-weight: 700;
+    font-style: italic;
+    font-size: 20px;
+    line-height: 1.5;
+    color: #fffefe;
+    margin-bottom: 40px;
+    max-width: 480px;
+}
+
+/* Button Styling */
+.btn-explore {
+    background-color: #fafafa; /* Light grey button */
+    border: none;
+    color: rgb(63, 23, 23);
+    padding: 10px 5px;
+  
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 20px;
+    transition: 0.3s;
+}
+
+.btn-explore:hover {
+    background-color: rgb(79, 33, 33);
+    color: rgb(255, 255, 255);
+    border-radius: 20px;
+     transform: scale(1.05);
+
+}
+
+/* Image Side Styling */
+.image-wrapper {
+    flex: 1;
+     display: flex;
+    justify-content: flex-end;
+}
+
+.image-wrapper img {
+    width: 100%;
+    opacity: 0.8;
+   
+    height: auto;
+    
+    /* The very specific rounded corners from your image */
+    border-radius: 60px; 
+    box-shadow: #000;
+    border: 1px solid #ddd; 
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: right;
+    max-width: 1100px;
+    margin: auto;
+    gap: 60px;
+
+}
+
+/* Responsive: Stacks on mobile */
+/* --- Rating Section Styles --- */
+.rating-section {
+    background-color: #f9f9f9;
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.rating-container h2 {
+    font-family: 'Fredoka One', cursive;
+    color: #4A3732;
+    font-size: 42px;
+    margin-bottom: 10px;
+}
+
+.rating-container p {
+    font-family: 'Lora', serif;
+    font-style: italic;
+    margin-bottom: 30px;
+}
+
+/* Star Rating System (Pure CSS Hover) */
+.stars {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+
+.star {
+    cursor: pointer;
+    color: #D1D5DB; /* Grey stars by default */
+    transition: color 0.2s;
+    padding: 0 5px;
+}
+
+.star:hover,
+.star:hover ~ .star {
+    color: #4A3732; /* Brown stars on hover */
+}
+
+textarea {
+    width: 100%;
+    max-width: 500px;
+    height: 100px;
+    padding: 15px;
+    border: 2px solid #D1D5DB;
+    border-radius: 10px;
+    font-family: 'Lora', serif;
+    margin-bottom: 20px;
+    outline: none;
+}
+
+.btn-submit {
+    background-color: #4A3732;
+    color: white;
+    border: none;
+    padding: 12px 40px;
+    font-family: 'Fredoka One', cursive;
+    font-size: 18px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-submit:hover {
+    background-color: #634a44;
+    transform: translateY(-2px);
+}
+
+/* --- Footer Styles --- */
+.footer {
+    background-color: #4A3732;
+    color: #D6D6D6;
+    padding: 60px 20px 20px;
+    font-family: 'Lora', serif;
+}
+
+.footer-content {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.footer-brand h3 {
+    font-family: 'Fredoka One', cursive;
+    font-size: 28px;
+    color: #fff;
+}
+
+.footer-links a {
+    color: #D6D6D6;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+}
+
+.footer-links a:hover {
+    color: #fff;
+}
+
+.footer-social {
+    width: 100%;
+    text-align: center;
+    margin-top: 40px;
+    border-top: 1px solid #634a44;
+    padding-top: 20px;
+    font-size: 14px;
+}
