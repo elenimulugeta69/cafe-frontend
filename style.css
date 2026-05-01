@@ -7,13 +7,25 @@
 body {
     font-family: 'Roboto', sans-serif;
 }
+@media (max-width: 900px) {
+    .menu-grid {
+        flex-direction: column;
+        align-items: center;
+    }
 
+    .menu-item {
+        width: 90%;
+    }
+}
+.menu-grid {
+    display: flex;
+}
 .hero-section {
     height: 100vh;
     width: 100%;
     /* Dark linear-gradient creates the "overlay" look from the image */
-    background: linear-gradient(rgba(47, 6, 6, 0.5), rgba(48, 4, 4, 0.5)), 
-                url('2.jpg'); 
+    background: linear-gradient(rgba(16, 16, 16, 0.5), rgba(48, 4, 4, 0.5)), 
+                url('fff.jpg'); 
     background-size: cover;
     background-position: center;
     color: white;
@@ -89,10 +101,8 @@ body {
 }
 
 /* Central Text Styling */
-.hero-content {
-    margin-top: 150px;
-   
-   
+.hero-content h1 {
+    font-size: 80px;
 }
 
 
@@ -134,7 +144,7 @@ body {
 
 /* Grid layout for 3 columns */
 .menu-grid {
-    display: flex;
+    
      
 padding-top: 20px;
      
@@ -390,7 +400,9 @@ textarea {
     cursor: pointer;
     transition: 0.3s;
 }
-
+.container {
+    display: flex;
+}
 .btn-submit:hover {
     background-color: #634a44;
     transform: translateY(-2px);
