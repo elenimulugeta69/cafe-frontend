@@ -13,7 +13,7 @@ body {
     width: 100%;
     /* Dark linear-gradient creates the "overlay" look from the image */
     background: linear-gradient(rgba(47, 6, 6, 0.5), rgba(48, 4, 4, 0.5)), 
-                url('2.jpg'); 
+                url('rr.jpg'); 
     background-size: cover;
     background-position: center;
     color: white;
